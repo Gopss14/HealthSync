@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthSync</title>
+  <link rel="stylesheet" href="/client/styles.css" />
+</head>
+<body>
+    <h1>HealthSync - Personal Health Dashboard</h1>
+    <div class="main-wrapper">
+      <div class="container">
+        <h2 style=" text-align: center;
+    color: #3a7bd5;">Enter Details</h2>
+  
+        <form id="health-form">
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" name="weight" required />
+  
+          <label for="steps">Steps Walked:</label>
+          <input type="number" id="steps" name="steps" required />
+  
+          <label for="calories">Calories Consumed:</label>
+          <input type="number" id="calories" name="calories" required />
+  
+          <label for="sleep">Sleep (hours):</label>
+          <input type="number" id="sleep" name="sleep" required />
+  
+          <button type="submit">Submit</button>
+        </form>
+  
+        <p style="font-weight: bold; margin-top: 20px;">AI response:</p>
+        <div id="ai-tips" class="tips-box"></div>
+      </div>
+  
+      <div id="chat-container" class="chatbox">
+        <h3>🤖 Ask HealthBot</h3>
+        <div id="chat-messages"></div>
+        <input type="text" id="user-input" placeholder="Ask something..." />
+        <button onclick="sendChat()">Send</button>
+      </div>
+    </div>
+  
+    <script src="/client/script.js"></script>
+  </body>
+  
+</html>
