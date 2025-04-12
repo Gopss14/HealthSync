@@ -10,7 +10,7 @@ document.getElementById('health-form').addEventListener('submit', async (e) => {
     };
   
     try {
-      const res = await fetch('http://localhost:5000/api/health/submit', {  // <-- Make sure "/submit" is included
+      const res = await fetch('https://healthsync-backend-diwp.onrender.com/api/health/submit', {  // <-- Make sure "/submit" is included
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -34,7 +34,7 @@ document.getElementById('health-form').addEventListener('submit', async (e) => {
     chatMessages.innerHTML += `<p class="user">${userInput}</p>`;
   
     try {
-      const res = await fetch('http://localhost:5000/api/chatbot', {
+      const res = await fetch('https://healthsync-backend-diwp.onrender.com/api/chatbot', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userInput })
